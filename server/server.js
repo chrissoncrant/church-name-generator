@@ -20,8 +20,8 @@ app.post('/', (req, res) => {
     const data = req.body;
     console.log(data);
     res.status(200).send({
-        message: 'Heree\'s the data we receeived: ',
-        data: data
+        message: 'Heree\'s the data we received: ',
+        data: [data.idea1, data.idea2]
     })
 })
 
