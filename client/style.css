@@ -1,0 +1,120 @@
+:root {
+    --black: black;
+    --14px: 0.875rem;
+    --16px: 1rem;
+    --18px: 1.125rem;
+    --20px: 1.25rem;
+    --24px: 1.5rem;
+    --28px: 1.75rem;
+    --32px: 2rem;
+    --36px: 2.25rem;
+    --48px: 3rem;
+
+    --font-1: 'Bebas Neue', sans-serif;
+    --font-2: 'Montserrat', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* This is friendlier for mobile than using 100vh on the body. The reason this is so has to do with the navigation that appears and disappears on mobile. */
+html, body {
+    height: 100%;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, 
+button, 
+textarea, 
+select {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+ol[role="list"], ul[role="list"] {
+    list-style: none;
+    padding: 0;
+}
+
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    overflow-wrap: break-word;
+    max-width: 65ch;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+button {
+    cursor: pointer;
+}
+
+.wrapper {
+    padding-inline: 38px;
+    margin-inline: auto;
+    max-width: 1000px;
+}
+
+.inputs-wrapper {
+    display: flex;
+    /* gap: 24px; */
+    flex-direction: column;
+}
+
+label {
+    display: block;
+}
+
+.results-display {
+    display: flex;
+    gap: 20px 36px;
+    flex-wrap: wrap;
+}
