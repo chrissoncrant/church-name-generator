@@ -58,10 +58,19 @@ async function handleSubmit(e) {
 
         console.log(data);
 
-        //Adding each response to the results display.
-        data.data.forEach(idea => {
+        // resultsDisplay.innerHTML += resultStripe(data.data);
+
+        const ideas = JSON.parse(data.ideas);
+
+        ideas.forEach(idea => {
             resultsDisplay.innerHTML += resultStripe(idea);
-        })
+        });
+        
+    } else {
+        const err = await response.text();
+        resultsDisplay.innerHTML = `An error occurred: ${err}`;
+
+        alert(err);
     }
 }
 

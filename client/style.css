@@ -35,7 +35,7 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeSpeed;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--font-2);
 }
 
 img,
@@ -80,6 +80,7 @@ h6,
 p {
     overflow-wrap: break-word;
     max-width: 65ch;
+    font-family: var(--font-1);
 }
 
 a {
@@ -95,6 +96,20 @@ p a {
 
 button {
     cursor: pointer;
+    color: white;
+    background-color: #8681EA;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    border-radius: 6.25rem;
+    margin-top: 18px;
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space, 36px);
+}
+
+#header-logo {
+    width: 200px;
 }
 
 .wrapper {
@@ -111,6 +126,10 @@ button {
 
 label {
     display: block;
+}
+
+input:last-child {
+    margin-top: 18px;
 }
 
 .results-display {
