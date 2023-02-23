@@ -94,14 +94,15 @@ p a {
     text-decoration: underline;
 }
 
-button {
-    cursor: pointer;
+.burger-menu-container {
+    background-color: black;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+i {
     color: white;
-    background-color: #8681EA;
-    border: none;
-    padding: 0.8rem 2.5rem;
-    border-radius: 6.25rem;
-    margin-top: 18px;
+    font-size: 3.5rem;
 }
 
 .flow > * + * {
@@ -118,18 +119,52 @@ button {
     max-width: 1000px;
 }
 
+form {
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin-inline: auto;
+}
+
 .inputs-wrapper {
     display: flex;
     /* gap: 24px; */
     flex-direction: column;
+    width: 300px;
 }
 
 label {
     display: block;
+    font-size: 1.3rem;
 }
 
-input:last-child {
-    margin-top: 18px;
+label:last-of-type {
+    margin-top: 24px;
+}
+
+input {
+    border: solid;
+    border-radius: 8px;
+}
+
+:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #8681EA;
+  }
+
+button {
+    cursor: pointer;
+    color: white;
+    background-color: #8681EA;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    border-radius: 6.25rem;
+    margin-top: 26px;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .results-display {
